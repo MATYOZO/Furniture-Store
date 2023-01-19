@@ -17,7 +17,7 @@ html {
 body {
   overflow-x: hidden;
 }
-.section1 {
+#section1 {
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
@@ -136,7 +136,7 @@ button {
   left: 0;
   bottom: 0;
   z-index: -1;
-  transition: 0.5s;
+  transition: 1s;
 }
 button:hover span {
   width: 100%;
@@ -145,7 +145,7 @@ button:hover {
   border: none;
 }
 
-.section2 {
+#section2 {
   box-shadow: var(--cwhite) 0 0 10px;
   width: 100vw;
   height: 90vh;
@@ -174,7 +174,7 @@ button:hover {
 .photo {
   flex: 1;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 1.5s;
   margin: 0.5%;
   box-shadow: #08070823 10px 20px 30px;
 }
@@ -194,18 +194,24 @@ button:hover {
   transition: 2s;
 }
 
-.section3 {
-  box-shadow: var(--silver) 0 0 10px;
+#section3 {
+  box-shadow: var(--sdw) 0 0 10px;
   width: 100vw;
-  height: 60vh;
+  height: 58vh;
   padding: 100px 0;
-  background-color: var(--silver);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(img_s3/furniture.png);
 }
 
-.section3 img {
+#section3 img {
   height: auto;
-  width: 55rem;
+  width: 60rem;
   box-shadow: #0807087e 10px 20px 30px;
+  transition: 1s;
+}
+
+#section3 img:hover {
+  transform: scale(1.05);
 }
 
 .f_furn {
@@ -245,20 +251,48 @@ button:hover {
   text-transform: capitalize;
 }
 
-.section4 {
-  box-shadow: var(--silver) 0 0 10px;
+#section4 {
+  box-shadow: var(--cwhite) 0 0 10px;
   width: 100vw;
   height: 60vh;
   padding: 100px 0;
   background-color: var(--cwhite);
 }
 
+#section5 {
+  box-shadow: var(--sdw) 0 0 10px;
+  width: 100vw;
+  height: 40vh;
+  padding: 100px 0;
+}
+
+.main4 {
+  width: 100vw;
+  max-width: 95%;
+  margin: -3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main4 h1 {
+  color: var(--cwhite);
+  font-size: 55px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  text-shadow: 3px 2px 0 var(--sdw);
+}
 @media (max-width: 1280px) {
+  .lol {
+    display: none;
+  }
   .main_menu {
     display: none;
   }
   .hamburger-menu {
-    display: inherit;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
   }
   #menu__toggle {
     opacity: 0;
@@ -275,14 +309,13 @@ button:hover {
     transform: rotate(90deg);
   }
   #menu__toggle:checked ~ .menu__box {
-    right: 0 !important;
+    top: 0 !important;
   }
   .menu__btn {
     position: fixed;
-    top: 28px;
-    right: 20px;
-    width: 25px;
+    width: 28px;
     height: 26px;
+    margin-right: 1.25rem;
     cursor: pointer;
     z-index: 11;
   }
@@ -293,7 +326,7 @@ button:hover {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #616161;
+    background-color: black;
     transition-duration: 0.25s;
     z-index: 1;
   }
@@ -308,20 +341,21 @@ button:hover {
   .menu__box {
     display: block;
     position: fixed;
-    top: 0;
-    right: -100%;
-    width: 300px;
+    top: -150%;
+    width: 100vw;
     height: 100%;
     margin: 0;
-    padding: 80px 0;
+    padding: 50px 0;
     list-style: none;
+    background-color: rgba(0, 0, 0, 0.158);
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.25s;
     z-index: 10;
   }
   .menu__item {
+    text-align: center;
     display: block;
-    padding: 12px 24px;
+    padding: 20px 0;
     color: red;
     font-family: "Roboto", sans-serif;
     font-size: 20px;
