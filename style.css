@@ -1,7 +1,17 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Lato", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#section {
+  padding: 4.5rem 0 2.5rem;
 }
 
 :root {
@@ -15,7 +25,9 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  background-color: var(--cwhite);
   overflow-x: hidden;
+  width: 100vw;
 }
 #section1 {
   width: 100vw;
@@ -184,20 +196,20 @@ button:hover {
 }
 
 .photo:hover img {
-  width: 70rem;
+  width: 80rem;
 }
 
 .photo img {
-  width: 15rem;
+  width: 25rem;
   height: 35rem;
   object-fit: cover;
   transition: 2s;
 }
 
 #section3 {
-  box-shadow: var(--sdw) 0 0 10px;
+  box-shadow: var(--sdw) 0 0 20px;
   width: 100vw;
-  height: 58vh;
+  height: 86vh;
   padding: 100px 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url(img_s3/furniture.png);
@@ -252,36 +264,77 @@ button:hover {
 }
 
 #section4 {
-  box-shadow: var(--cwhite) 0 0 10px;
   width: 100vw;
   height: 60vh;
-  padding: 100px 0;
   background-color: var(--cwhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.s4_container {
+  max-width: 650px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.s4_card {
+  position: relative;
+  width: 200px;
+  overflow: hidden;
+}
+
+.s4_data {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+}
+
+.s4_title,
+.s4_description {
+  color: var(--cwhite);
+  text-shadow: 1px 2px 0 var(--sdw);
+}
+
+.s4_title {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.s4_description {
+  display: block;
+  font-size: 0.75rem;
+}
+
+.s4_picture {
+  transition: 0.3s;
+}
+
+.s4_picture:hover {
+  transform: scale(1.1);
 }
 
 #section5 {
-  box-shadow: var(--sdw) 0 0 10px;
+  text-align: center;
   width: 100vw;
-  height: 40vh;
-  padding: 100px 0;
+  height: 4vh;
+  margin-top: 12.5rem;
+  background-color: var(--cwhite);
 }
 
-.main4 {
-  width: 100vw;
-  max-width: 95%;
-  margin: -3rem auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.footer {
+  color: var(--silver);
+  font-size: 0.65rem;
+  letter-spacing: 0.15rem;
+  font-weight: 100;
 }
 
-.main4 h1 {
-  color: var(--cwhite);
-  font-size: 55px;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-  text-shadow: 3px 2px 0 var(--sdw);
+.footer a {
+  text-decoration: none;
+  color: var(--contrast);
 }
+
 @media (max-width: 1280px) {
   .lol {
     display: none;
