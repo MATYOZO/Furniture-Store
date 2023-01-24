@@ -263,6 +263,14 @@ button:hover {
   text-transform: capitalize;
 }
 
+.kids {
+  text-align: center;
+  margin: 3rem 0 -2rem;
+  font-size: 48px;
+  color: var(--sdw);
+  text-shadow: var(--silver) 2px 2px 0;
+}
+
 #section4 {
   width: 100vw;
   height: 60vh;
@@ -270,7 +278,11 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 4rem;
+}
+
+#section4 h2 {
+  color: var(--gold);
 }
 
 .s4_container {
@@ -319,7 +331,7 @@ button:hover {
   text-align: center;
   width: 100vw;
   height: 4vh;
-  margin-top: 12.5rem;
+  margin-top: 2rem;
   background-color: var(--cwhite);
 }
 
